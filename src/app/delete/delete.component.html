@@ -1,0 +1,77 @@
+<div class="duse">
+<div class="page-header" style="background-color: #ff6666;">
+    <h2 style="color: #000000; text-align: center;">Cancel request for blood!</h2>
+</div>
+
+
+
+
+
+
+<form [formGroup]="deleteForm">
+<div class="col-xs-4">
+    Request ID:
+
+    <input type="text" formControlName="id" list="dlId" (change)="findById()"  class="form-control">
+    <datalist id="dlId">
+        <option *ngFor="let u of users" [value]="u.id">{{u.id}}</option>
+    </datalist>
+</div>
+    <br>
+    <br>
+    <div class="page-header">
+        <h4>Enter your Name here:</h4>
+    </div><br>
+
+    <div class="col-xs-4" id="bloc1">
+    First_Name: <input type="text" name="" id="" formControlName="firstname" placeholder="first name" class="form-control"><br><br>
+</div>
+<div class="col-xs-4" id="bloc2">
+    Last_Name: <input type="text" name="" id="" formControlName="lastname" placeholder="last name" class="form-control"><br><br>
+</div><br><br><br><br><br>
+    <!-- Age: <input type="text" name="" id="" formControlName="age">
+
+    Gender:<input type="text" name="" id="" formControlName="gender">
+     <select formControlName="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+
+        </select> -->
+    <!-- <input type="radio" name="gender" id="rdoMale" formControlName="gender" value="male"><label
+        for="rdoMale">Male</label>&nbsp;
+    <input type="radio" name="gender" id="rdoFemale" formControlName="gender" value="female"><label
+        for="rdoFemale">Female</label>&nbsp;
+    <input type="radio" name="gender" id="rdoOthers" formControlName="gender" value="others"><label
+        for="rdoOthers">Others</label>&nbsp; -->
+
+    <!-- Email-ID: <input type="text" name="" id="" formControlName="email"> <br><br>
+
+    Address: <textarea type="text" name="" id="" formControlName="address"></textarea>
+
+    Blood Group:<input type="text" name="" id="" formControlName="bgp"> -->
+    <!-- <select formControlName="bgp">
+        <option>A+</option>
+        <option>B+</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+    </select> -->
+
+    <!-- Units of Blood Required: <input type="text" name="" id="" formControlName="unit">  -->
+<p align="center">
+    <input type="button" name="" id="" value="Delete" (click)="fndeleteUser()" class="btn btn-danger">
+    &nbsp;  <input type="reset" name="" id="" value="Reset" (click)="fndeleteUser()" class="btn btn-warning">
+</p>
+
+
+</form>
+</div>
+
+<br>
+<!-- THere are
+{{users.length}}
+users -->
+<br>
+<hr>
+

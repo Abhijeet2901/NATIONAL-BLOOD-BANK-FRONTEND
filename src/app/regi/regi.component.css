@@ -1,0 +1,15 @@
+#blok1,#blok2
+{
+    display: inline;
+}
+#blok3,#blok4
+{
+    display: inline;
+}
+.container{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-geometric-gradient-creative-blood-donation-poster-background-material-image_134137.jpg);
+     width :1250px ; 
+     height: 750px ;
+     background-size: 100% ;
+     background-size: cover;
+}

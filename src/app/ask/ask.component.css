@@ -1,0 +1,116 @@
+#blo1,#blo2
+{
+    display: inline;
+}
+#blo3,#blo4
+{
+    display: inline;
+}
+#blo5,#blo6
+{
+    display: inline;
+}
+#blo7,#blo8
+{
+    display: inline;
+}
+.scss
+{
+    
+      border: 1px  ;
+      padding: 20px;
+      border-radius: 25px;
+    /* border: 1px solid  #800000;
+    padding: 20px;
+    */
+}
+.scss:hover
+    {
+      -moz-box-shadow: 0 0 50px #808080;
+      -webkit-box-shadow: 0 0 50px #808080;
+      box-shadow: 0 0 50px #808080;
+    }
+     input[type="text"]:focus{
+        outline: none;
+        box-shadow: 0px 0px 50px  		#c69fc6 ;
+        border:1px solid #808080;
+        }
+        
+        input[type="text"]:hover{
+        border: 1px solid #999;
+        border-radius: 5px;
+        }
+        
+        input[type="text"]:focus:hover{
+        outline: none;
+        box-shadow: 0px 0px 50px 		#c69fc6;
+        border:1px solid #5AB0DB;
+        border-radius:5px;
+        
+        }    ​ 
+#textArea
+{
+    margin:2px 2px;
+    padding:30px;
+    height:20px;
+    line-height:20px;
+    width:50%;
+    display:block;
+    margin:5px;    
+}
+
+.selcls { 
+    padding: 9px; 
+    border: solid 1px #517B97; 
+    outline: 0; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CAD9E3), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #CAD9E3 1px, #FFFFFF 25px); 
+    box-shadow:  0px 0px 50px  #c69fc6 ; 
+    -moz-box-shadow:  0px 0px 50px  #c69fc6; 
+    -webkit-box-shadow:  0px 0px 50px  #c69fc6; 
+
+    } 
+
+    /* .wrapper{
+        width: 450px;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    .wrapper .input-data{
+        height: 40px;
+        width: 100%;
+        position: relative;
+
+    }
+    .wrapper .input-data input{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 17px;
+        border-bottom: 2px solid silver;
+        
+    .input-data input:focus ~ label,
+    .input-data input:valid ~ label{
+
+        transform: translateY(-20px);
+        font-size: 15px;
+        color: #4158d0;
+
+    }    
+        
+    }
+    .wrapper .input-data label{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        color: grey;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    } */
+
+
+    
+   
+    
+   

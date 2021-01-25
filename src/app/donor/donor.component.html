@@ -1,0 +1,162 @@
+<div class="grphic">
+<div class="donr">
+<div class="page-header">
+<h2 style="color:  #000000; text-align:center;">Get yourself registered as a blood donor here!</h2>
+</div>
+<form [formGroup]="regForm"  (submit)="fnCreateBloodDonor()" ngNativeValidate >
+   <!-- <div id="block_container">-->
+    <!--<div [ngClass]="{'has-error':fn.iD.errors && fn.iD.touched}" class="col-xs-3">
+        Donor ID: <input type="number" id="" formControlName="iD" list=" fnFindDonorById()" class="form-control" >
+        <datalist id="dnId">
+            <option *ngFor="let d of dd" [value]="d.iD">{{d.iD}}</option>
+        </datalist>
+        <span class="alert-danger" *ngIf="fn.iD.errors && (fn.iD.touched || fn.iD.dirty)">ID should not  be left</span>
+        </div><br><br>-->
+            <div class="page-header">
+                <h4>Enter your personal details here!</h4>
+                </div>
+            <div id="bloc1" [ngClass]="{'has-error':fn.firstName.errors && fn.firstName.touched}" class="col-xs-6">
+                <input type="text" id="" formControlName="firstName" class="form-control" placeholder="Enter your first name here" >
+                <span class="alert-danger" *ngIf="fn.firstName.errors && (fn.firstName.touched || fn.firstName.dirty)">First Name must not be greater than 20 or left blank</span>
+                </div>
+                <div id="bloc2" [ngClass]="{'has-error':fn.lastName.errors && fn.lastName.touched}" class="col-xs-6">
+                <input type="text" id="" formControlName="lastName" class="form-control" placeholder="Enter your last name here">
+                <span class="alert-danger" *ngIf="fn.lastName.errors && (fn.lastName.touched || fn.lastName.dirty)">Last Name must not be greater than 20 or left blank</span>
+               </div><br><br><br><br>
+           <!-- </div>-->
+               <div [ngClass]="{'has-error':fn.aGe.errors && fn.aGe.touched}" class="col-xs-3" id="bloc3 ">
+                <input type="number" id="" formControlName="aGe" class="form-control" placeholder="age">
+                <span class="alert-danger" *ngIf="fn.aGe.errors && (fn.aGe.touched || fn.aGe.dirty)">Can not be left blank</span>
+               </div>
+               
+               <div [ngClass]="{'has-error':fn.dTe.invalid && fn.dTe.touched}" class="col-xs-3" id="bloc3 ">
+                Date of Birth<input type="date" id="" formControlName="dTe" class="form-control" >
+                <span class="alert-danger" *ngIf="fn.dTe.invalid && (fn.dTe.touched || fn.dTe.dirty)">Can not be left blank</span>
+               </div>
+               &nbsp;   <div id="bloc4">
+                Select your gender:    &nbsp;<input type="radio" value="male" name="gender" formControlName="genDer" id="rdoMale"><label for="rdoMale">Male</label>
+               &nbsp;<input type="radio" value="female" name="gender" formControlName="genDer" id="rdoFemale"><label for="rdoFemale">Female</label>
+               &nbsp;<input type="radio" value="others" name="gender" formControlName="genDer" id="rdoOther"><label for="rdoOther">Others</label>
+              </div><br><br><br>
+               <div [ngClass]="{'has-error':fn.heIt.errors && fn.heIt.touched}" class="col-xs-3" id="bloc5 ">
+                <input type="number" id="" formControlName="heIt" class="form-control" placeholder="Height">
+                <span class="alert-danger" *ngIf="fn.heIt.errors && (fn.heIt.touched || fn.heIt.dirty)">Can not be left blank</span>
+               </div>
+               <div [ngClass]="{'has-error':fn.weIt.errors && fn.weIt.touched}" class="col-xs-3" id="bloc6 ">
+                <input type="number" id="" formControlName="weIt" class="form-control" placeholder="Weight">
+                <span class="alert-danger" *ngIf="fn.weIt.errors && (fn.weIt.touched || fn.weIt.dirty)">Can not be left blank</span>
+               </div>
+    <br><br>
+
+      <div class="page-header">
+        <h4>Personal contact details</h4>
+        </div>
+       <div [ngClass]="{'has-error':fn.mailId.errors && fn.mailId.touched}" class="col-xs-4" id="bloc7">
+        <input type="text" id="" formControlName="mailId" class="form-control" placeholder="Enter your Email id">
+        <span class="alert-danger" *ngIf="fn.mailId.errors && (fn.mailId.touched || fn.mailId.dirty)">Can not be left blank</span>
+       </div>
+       <div class="col-xs-4" id="bloc8">
+       <input type="number" id="" formControlName="contNo" class="form-control" placeholder="Enter your phone number">
+       </div><br><br>
+       <div class="page-header">
+        <h4>Enter your address here</h4>
+        </div>
+       <div [ngClass]="{'has-error':fn.addRess.errors && fn.addRess.touched}">
+        <textarea formControlName="addRess"  class="form-control" id="txtarea" spellcheck="false" placeholder="Enter your address here"></textarea>
+        <span class="alert-danger" *ngIf="fn.addRess.errors && (fn.addRess.touched || fn.addRess.dirty)">Can not be left blank</span>
+       </div>
+       <div class="page-header">
+        <h4>Blood donation information</h4>
+        </div>
+       <div class="col-xs-3" id="bloc9">
+        <select  formContrlName="bloodGrp" class="form-control">
+            <option value="" disabled selected>Select blood group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+          </select>   
+       </div>
+       
+      <br>
+
+      <br>
+
+      <div>
+       
+            <div class = "form-group form-inline col-md-12 mb-3">
+                <div class="form-check form-check-inline" id="bloc10">
+                    <b>Have you ever donated blood?*</b><br>
+                    <input class="form-check-input" type="radio" formControlName = "flag"  value = "Y" (ngModelChange)="radioValueCheck(1)" >
+                    <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" formControlName = "flag" value = "N" (ngModelChange)="radioValueCheck(2)" >
+                    <label class="form-check-label">No</label>
+                </div>
+            </div> 
+        &nbsp;
+                <div id="bloc11">
+                    <label> If you have donated blood please put the last date:*</label>
+                    <div class="input-group">
+                        <br><input type="date" class="form-control" placeholder="dd/mm/yyyy" formControlName="date"  [attr.disabled]="showInputFlg ? 'disabled' : null">
+                    </div>
+                </div>
+            </div>
+    <br><br>
+    <p align="center">
+    <input type="submit" value="Become a Donor" class="btn btn-primary">
+    &nbsp;<input type="reset"  value="Reset"  class="btn btn-primary">
+    &nbsp;<input type="submit" value="Update"  class="btn btn-primary" (submit)="fnUpdateBloodDonor()"><br>
+    </p>
+    <table  class="table table-hover table-striped">
+        <thead>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>AGE</th>
+            <th>Gender</th>
+            <th>DATE OF BIRTH</th>
+            <th>HEIGHT</th>
+            <th>WEIGHT</th>
+            <th>EMAIL ID</th>
+            <th>PHONE</th>
+            <th>ADDRESS</th>
+            <th>BLOOD GROUP</th>
+            <th>HAVE YOUR EVER DONATED BLOOD</th>
+            <th>LAST DATE OF BLOOD DONATION</th>
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of dd">
+                <td>{{ d.iD }}</td>
+                <td>{{ d.firstName }}</td>
+                <td>{{ d.lastName }}</td>
+                <td>{{ d.aGe }}</td>
+                <td>{{ d.genDer | titlecase }}</td>
+                <td>{{d.dTe}}</td>
+                <td>{{d.heIt}}</td>
+                <td>{{d.weIt}}</td>
+                <td>{{ d.mailId }}</td>
+                <td>{{d.contNo}}</td>
+                <td>{{d.addRess}}</td>
+                <td>{{d.bloodGrp}}</td>
+                <td>{{ d.flag }}</td>
+                <td>{{d.date}}</td>
+                
+                        
+                
+            </tr>
+        </tbody>
+        </table> 
+
+</form>
+
+</div>
+</div>
+<br>
+<hr>

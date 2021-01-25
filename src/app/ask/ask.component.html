@@ -1,0 +1,208 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+
+
+            <div class="scss">
+                <div class="page-header">
+                    <h2 style="color: #000000; text-align: center;">Request for blood!</h2>
+                </div>
+
+                <form [formGroup]="userloginForm" (submit)="fnSubmit()" ngNativeValidate>
+<!-- 
+                    <div [ngClass]="{'has-error':f.id.errors && f.id.touched}" class="col-xs-2">
+                        Request ID: <input type="text" id="" formControlName="id" class="form-control">
+
+                        <span class="alert-danger" *ngIf="f.id.errors && (f.id.touched || f.id.dirty)">enter any
+                            id</span>
+
+                    </div><br><br> -->
+                    <div class="page-header">
+                        <h4>Enter your personal Details here</h4>
+                    </div>
+            
+                    <div [ngClass]="{'has-error':f.firstname.errors && f.firstname.touched}" class="col-xs-6" id="blo1">
+                         <input type="text" name="" id="" formControlName="firstname" 
+                         class="form-control" placeholder="Enter your first name here">  
+                          <!-- <label>First Name</label> -->
+                        <span class="alert-danger"
+                            *ngIf="f.firstname.errors && (f.firstname.touched || f.firstname.dirty)">First Name
+                            Required</span>
+                    </div>
+                
+
+                    <div [ngClass]="{'has-error':f.lastname.errors && f.lastname.touched}" class="col-xs-6" id="blo2">
+                        <input type="text" name="" id="" formControlName="lastname" class="form-control" placeholder="Enter your last name here">
+
+                        <span class="alert-danger"
+                            *ngIf="f.lastname.errors && (f.lastname.touched || f.lastname.dirty)">enter last
+                            name</span>
+                    </div><br><br><br><br>
+
+                    <div [ngClass]="{'has-error':f.age.errors && f.age.touched}" class="col-xs-3" id="blo3">
+                         <input type="text" name="" id="" formControlName="age" class="form-control" placeholder="Age">
+
+                        <span class="alert-danger" *ngIf="f.age.errors && (f.age.touched || f.age.dirty)">enter
+                            Age</span>
+                    </div>&nbsp;
+
+
+                    &nbsp;<div id="blo4">
+                        <b>Gender:*</b> &nbsp; <input type="radio" name="gender" id="rdoMale" formControlName="gender" value="male"><label
+                            for="rdoMale">Male</label>&nbsp;
+                        <input type="radio" name="gender" id="rdoFemale" formControlName="gender" value="female"><label
+                            for="rdoFemale">Female</label>&nbsp;
+                        <input type="radio" name="gender" id="rdoOthers" formControlName="gender" value="others"><label
+                            for="rdoOthers">Others</label>&nbsp;
+
+                        <span class="alert-danger"
+                            *ngIf="f.gender.errors && (f.gender.touched || f.gender.dirty)">select
+                            gender</span>
+                    </div>
+                    <br>
+
+                    <!-- <input type="checkbox" formControlName="gender">male
+        <input type="checkbox" formControlName="gender">female
+        <input type="checkbox" formControlName="gender">other
+        <br><br> -->
+
+                    <!-- Gender: <input  type="text" name="" id="" formControlName="gender"> <br><br> -->
+                    <div class="page-header">
+                        <h4>Enter your contact deatils here</h4>
+                    </div>
+                    <div class="col-xs-4" id="blo5">
+                    <input type="text" name="" id="" formControlName="email" class="form-control" placeholder="Enter your email id here">
+                    </div>
+
+                    <div [ngClass]="{'has-error':f.contactno.errors && f.contactno.touched}" class="col-xs-4" id="blo6">
+                        <input type="text" name="" id="" formControlName="contactno"
+                            class="form-control" placeholder="Enter your phone number here">
+                        <span class="alert-danger"
+                            *ngIf="f.contactno.errors && (f.contactno.touched || f.contactno.dirty)">enter your
+                            contact Number</span>
+                    </div><br><br><br><br>
+
+                    <div>
+                        <textarea type="text" name="" id="textArea" formControlName="address" class="form-control"
+                            rows="4" placeholder="Enter your address here"></textarea> <br><br>
+                    </div>
+                    <div class="page-header">
+                        <h4>Blood information here</h4>
+                    </div>
+        
+                        <!-- Blood Group:
+                        <select class="form-control" value="">
+                            <option>---Select Blood group---</option>
+                            <option>A+</option>
+                            <option>B+</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                        </select> -->
+                        <div [ngClass]="{'has-error':f.bgp.errors && f.bgp.touched}" class="col-xs-3" id="blo7" class="form-group">
+                            <!-- <label for="bldgrp" class="col-sm-2 control-label"><b>Select blood group</b>:</label> -->
+                            <div class="col-sm-3">
+                            <select class="form-control selcls"  formControlName="bgp" id="bldgrp">
+                            <option value="" disabled selected>Select blood group</option>
+                              <option value="ap">A+</option>
+                              <option value="an">A-</option>
+                              <option value="bp">B+</option>
+                              <option value="bn">B-</option>
+                              <option value="abp">AB+</option>
+                              <option value="op">O+</option>
+                              <option value="on">O-</option>
+                            </select>          
+                              
+                            </div>
+                            <br><span class="alert-danger" *ngIf="f.bgp.errors && (f.bgp.touched || f.bgp.dirty)">select blood
+                                Group</span>
+                    </div>          
+                    
+                    
+                    <br>
+                       
+                    
+
+                    &nbsp;<div [ngClass]="{'has-error':f.unit.errors && f.unit.touched}" class="col-xs-3" id="blo8">
+                        <input type="text" name="" id="" formControlName="unit"
+                            class="form-control" placeholder="Required amount blood">
+
+                        <span class="alert-danger" *ngIf="f.unit.errors && (f.unit.touched || f.unit.dirty)">enter
+                            number
+                            of Units</span>
+                    </div> <br><br><br><br><br>
+                    <p align="center">
+                    <input type="submit" value="Submit" class="btn btn-primary" >&nbsp;
+                    <input type="reset" value="Reset" class="btn btn-primary">&nbsp;
+                    <input type="submit" value="Update" class="btn btn-primary" (click)="fnUpdate()"><br>
+                </p>
+
+                    <div>
+                        <input type="button" value="Cancel your request for blood " class="btn btn-danger btn-block"
+                        (click)="navigateToDelete()">
+            
+            
+                    </div>
+
+                   
+
+
+                    
+        <table  class="table table-hover table-striped">
+                    <thead>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>AGE</th>
+                        <th>Gender</th>
+                        
+                        <th>E-MAIL</th>
+                        <th>CONTACT NUMBER</th>
+                        <th>ADDRESS</th>
+                        <th>BLOOD GROUP REQUIRED</th>
+                        <th>UNITS</th>
+                        <th></th>
+                       
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of users">
+                            <td>{{ u.id }}</td>
+                            <td>{{ u. firstname }}</td>
+                            <td>{{ u.lastname }}</td>
+                            <td>{{ u.age }}</td>
+                            <td>{{ u.gender | titlecase }}</td>
+                            <td>{{ u.email }}</td>
+                            <td>{{ u.contactno }}</td>
+                            <td>{{ u.address }}</td>
+                            <td>{{ u.bgp }}</td>
+                            <td>{{ u.unit }}</td>
+                            
+                                    
+                            
+                        </tr>
+                    </tbody>
+                    </table> 
+
+                </form>
+
+            </div>
+            
+        </div>
+        <!--<div class="col-md-3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="button" value="Cancel your request for blood " class="btn btn-danger btn-block"
+            (click)="navigateToDelete()">
+
+
+        </div>-->
+        
+    </div>
+</div>
+<br>
+<hr>
+
+
+<!-- {{users | json}} -->

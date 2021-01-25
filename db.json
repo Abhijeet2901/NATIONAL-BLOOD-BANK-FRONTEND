@@ -1,0 +1,99 @@
+{
+  "donors": [
+    {
+      "iD": 1,
+      "firstName": "Sayantan",
+      "lastName": "Jana",
+      "aGe": 25,
+      "genDer": "male",
+      "dTe": "1996-11-14",
+      "heIt": 168,
+      "weIt": 80,
+      "mailId": "sayantanjana@mail.com",
+      "contNo": 9876543210,
+      "addRess": "Kolkata",
+      "bloodGrp": null,
+      "flag": "Y",
+      "date": "2019-09-23",
+      "id": 1
+    }
+  ],
+  "bloodstock": [
+    {
+      "id": 101,
+      "userId": "O+",
+      "title": 120
+    },
+    {
+      "id": 102,
+      "userId": "O-",
+      "title": 200
+    }
+  ],
+  "userreg": [
+    {
+      "id": "1",
+      "firstname": "Abhijeet",
+      "lastname": "Masih",
+      "age": "25",
+      "gender": "male",
+      "email": "abmasih82@gmail.com",
+      "contactno": "9876543211",
+      "address": "gorakhpur",
+      "bgp": "O+",
+      "unit": "2"
+    },
+    {
+      "id": "2",
+      "firstname": "Deepak",
+      "lastname": "Kumar",
+      "age": "21",
+      "gender": "male",
+      "email": "kumar.deepak@mail.com",
+      "contactno": "1238741462",
+      "address": "Chennai",
+      "bgp": "AB+",
+      "unit": "3"
+    },
+    {
+      "id": "3",
+      "firstname": "RAM kumar",
+      "lastname": "Das",
+      "age": "54",
+      "gender": "male",
+      "email": "ram.das@mail.com",
+      "contactno": "2347621412",
+      "address": "Mumbai",
+      "bgp": "AB-",
+      "unit": "4"
+    }
+  ],
+  "genreg": [
+    {
+      "id": 6,
+      "Fname": "Sindhu",
+      "Lname": "Kondaparla",
+      "Mailid": "sindhu@gmail.com",
+      "Phoneno": "1235476809",
+      "Password": "sindhu23",
+      "ConfirmPwd": "sindhu23"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

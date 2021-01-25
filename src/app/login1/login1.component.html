@@ -1,0 +1,25 @@
+<div class="lgin">
+<div class="page-header" style="background-color: 	#004466;">
+<h2 style="color:#000000">Log In</h2>
+</div>
+<form [formGroup]="loginForm" ngNativeValidate>
+    <div [ngClass]="{'has-error':f.userId.errors && f.userId.touched}" class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+    <input type="text" id="un" formControlName="userId" class="form-control" placeholder="User ID"><br>
+    <span class="alert-danger" *ngIf="f.userName.errors && (f.userId.touched || f.userId.dirty)">User Name must be atleast 4 characters</span>
+    </div><br>
+    <div [ngClass]="{'has-error':f.password.errors && f.password.touched}" class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input type="password" id="pw" formControlName="password" class="form-control" placeholder="Password"><br>
+    <span class="alert-danger" *ngIf="f.password.errors && (f.password.touched || f.password.dirty)">Password must be atleast 8 characters</span>
+</div><br><br>
+<p align="center">
+<button type="submit" value="Submit" class="btn btn-primary" (click)="navigateToLogin()">Log In</button>
+&nbsp;<button type="reset"  value="Reset"  class="btn btn-primary">Cancel</button><br><br>
+New user? then<button type="submit" value="Submit" class="btn btn-link" (click)="navigateToSignup()">Sign Up</button>here!
+</p>
+</form>
+</div>
+<br>
+
+

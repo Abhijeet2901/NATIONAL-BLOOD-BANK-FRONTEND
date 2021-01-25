@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-5">
+<h1 style="text-align:center; color:red">Registration Form</h1>
+<form [formGroup]="genregForm" name="myForm" ngNativeValidate>
+
+    <div [ngClass]="{'has-error':f.id.errors && (f.id.touched || f.id.dirty)}">
+        ID:   
+       <input type="text" name="" ng-model="id" class="form-control"  placeholder="Id" formControlName="id">
+       <span *ngIf="f.id.errors && (f.id.touched || f.id.dirty)">
+           * Invalid ID
+           <span *ngIf="f.id.errors.requried">
+               *Required Field
+           </span>
+       </span>
+       </div>
+ 
+    <div [ngClass]="{'has-error':f.Fname.errors && (f.Fname.touched || f.Fname.dirty)}">
+ Firstname:   
+<input type="text" name="name" ng-model="name" class="form-control" pattern="[a-zA-Z][a-zA-Z ]+" placeholder="Enter your Firstname" formControlName="Fname">
+<span *ngIf="f.Fname.errors && (f.Fname.touched || f.Fname.dirty)">
+    * Invalid name
+    <span *ngIf="f.Fname.errors.requried">
+        *Required Field
+    </span>
+</span>
+</div>
+<br>
+
+<p style="color:black;">Lastname:</p>
+<input type="text" name="Lname" class="form-control" placeholder="Enter your Lastname" formControlName="name" required>
+<br>
+
+<div [ngClass]="{'has-error':f.Mailid.errors && (f.Mailid.touched || f.Mailid.dirty)}">
+<p style="color:black;">Mail:</p>
+<input type="text"  class="form-control" formControlName="Mailid" placeholder="e.g: abc@gmail.com" required>
+<span *ngIf="f.Mailid.errors && (f.Mailid.touched || f.Mailid.dirty)">
+    * Invalid Mailid
+    <span *ngIf="f.Mailid.errors.requried">
+        *Required Field
+    </span>
+</span>
+</div>
+
+<br>
+
+<div [ngClass]="{'has-error':f.Phoneno.errors && (f.Phoneno.touched || f.Phoneno.dirty)}">
+<p style="color:black;">Phone Number :</p>
+<input type="number" class="form-control" formControlName="Phoneno" maxlength="10" placeholder="Contact No" required >
+<span *ngIf="f.Phoneno.errors && (f.Phoneno.touched || f.Phoneno.dirty)">
+    * Invalid Phone Number
+    <span *ngIf="f.Phoneno.errors.requried">
+        *Required Field
+    </span>
+</span>
+</div>
+<br>
+
+<div [ngClass]="{'has-error':f.Password.errors && (f.Password.touched || f.Password.dirty)}">
+<p style="color:black;">Password:</p>
+<input type="text" class="form-control" formControlName="Password" placeholder="Enter the Password" required>
+<span *ngIf="f.Password.errors && (f.Password.touched || f.Password.dirty)">
+    * Invalid Password
+    <span *ngIf="f.Password.errors.requried">
+        *Required Field
+    </span>
+</span>
+</div>
+<br>
+
+<div [ngClass]="{'has-error':f.ConfirmPwd.errors && (f.ConfirmPwd.touched || f.ConfirmPwd.dirty)}">
+<p style="color:black;">ConfirmPassword:</p>
+<input type="text" class="form-control" formControlName="ConfirmPwd" placeholder="Enter the Confirm Password" required>
+<span *ngIf="f.ConfirmPwd.errors && (f.ConfirmPwd.touched || f.ConfirmPwd.dirty)">
+    * Invalid Password
+    <span *ngIf="f.ConfirmPwd.errors.requried">
+        *Required Field
+    </span>
+</span>
+</div>
+<br>
+
+<input type="Button" value="Submit" class="btn btn-success" (click)="fnCreateGenreg()">&nbsp;
+
+<input type="reset" value="Reset" class="btn btn-info">
+</form>
+<br>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+<!--<table class="table table-hover table-striped" border="1">
+<thead>
+    <th>Id</th>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Mailid</th>
+    <th>PhoneNo</th>
+    <th>Password</th>
+    <th>ConfirmPwd</th>
+</thead>
+<tbody>
+    <tr *ngFor="let e of genreg">
+        <td>{{ e.id }}</td>
+        <td>{{ e.Fname }}</td>
+        <td>{{ e.Lname }}</td>
+        <td>{{ e.Mailid }}</td>
+        <td>{{ e.Phoneno }}</td>
+        <td>{{ e.Password }}</td>
+        <td>{{e.ConfirmPwd}}</td>        
+     
+    </tr>
+</tbody>
+</table>-->
