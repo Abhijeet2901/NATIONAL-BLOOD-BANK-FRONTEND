@@ -6,15 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class RegistService {
 
-  url:string="http://localhost:3000/genreg/"
-  constructor(private http:HttpClient,) { }
+  url:string="http://localhost:8080/registration/";
+  url1:string="http://localhost:8080/registration/update/";
+
+  constructor(private http:HttpClient) { }
 
   getGenreg()
   {
     return this.http.get(this.url);
   }
 
-  findGenregById (id:any)
+  findGenregById (id:number)
   {
     return this.http.get(this.url+id);
   }
@@ -22,5 +24,11 @@ export class RegistService {
   createGenreg(genreg:any)
   {
     return this.http.post(this.url,genreg);
+  }
+  // http://localhost:8080/registration/update/4010/Abcd/Abcd
+  updateGenreg(id:any,password:any,confirmpassword:any)
+  {
+    return this.http.put('http://localhost:8080/registration/update/'+id+'/'+password+'/'+confirmpassword,null);
+    // return 0;
   }
 }

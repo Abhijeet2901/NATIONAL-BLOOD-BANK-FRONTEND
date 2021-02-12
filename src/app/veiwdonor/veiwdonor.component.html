@@ -1,0 +1,241 @@
+<div class="bg">
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-billboard">
+            <div class="img"></div>
+              <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+            <h2><a style="text-decoration:none; color:crimson" [routerLink]="['./home']"><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="80" height="80" /> <i>National Blood Bank</i></a></h2>
+            <!-- <p>National Blood Bank is an initiative to connect, digitize and streamline the work flow of blood banks across the nation</p> -->
+          </div>
+        <div class="col-md-2">
+            <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="110"></h1>
+          </div>
+          <div class="col-md-2">
+            <h1><img src="https://cdn.freebiesupply.com/logos/large/2x/who-logo-png-transparent.png" width="150" height="110"></h1>
+          </div>
+            
+         </div>
+       </div>
+       
+        </div>
+    <br><br><br><br>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="ddnr">
+      <div class="page-header" >
+          <h2 style="color: #000000; text-align: center;">View Donor's details</h2>
+      </div>
+      <form [formGroup]="regForm"   ngNativeValidate >
+        <!-- <div id="block_container">-->
+        
+          <div class="col-xs-3">
+                <input type="text" id="" formControlName="id" class="form-control" placeholder="Donor ID" (change)=" fnAllDonor()"/>
+              </div>
+<br><br>
+                 <div class="page-header">
+                     <h4>Enter your personal details here!</h4>
+                     </div>
+                 <div id="bloc1" [ngClass]="{'has-error':fn.firstname.errors && fn.firstname.touched}" class="col-xs-6">
+                     <input type="text" id="" name="" formControlName="firstname" class="form-control" placeholder="Enter your first name here" >
+                     <span class="alert-danger" *ngIf="fn.firstname.errors && (fn.firstname.touched || fn.firstname.dirty)">First Name must not be greater than 20 or left blank</span>
+                     </div>
+                     <div id="bloc2" [ngClass]="{'has-error':fn.lastname.errors && fn.lastname.touched}" class="col-xs-6">
+                     <input type="text" id="" name="" formControlName="lastname" class="form-control" placeholder="Enter your last name here">
+                     <span class="alert-danger" *ngIf="fn.lastname.errors && (fn.lastname.touched || fn.lastname.dirty)">Last Name must not be greater than 20 or left blank</span>
+                    </div><br><br><br><br>
+                <!-- </div>-->
+                    <div [ngClass]="{'has-error':fn.age.errors && fn.age.touched}" class="col-xs-3" id="bloc3 ">
+                     <input type="number" id="" name="" formControlName="age" class="form-control" placeholder="age">
+                     <span class="alert-danger" *ngIf="fn.age.errors && (fn.age.touched || fn.age.dirty)">Can not be left blank</span>
+                    </div>
+                    <!-- <input type="date" name="" class="form-control" placeholder="dd/mm/yyyy" formControlName="ldd"  [attr.disabled]="showInputFlg ? 'disabled' : null"> -->
+                    <div [ngClass]="{'has-error':fn.dob1.invalid && fn.dob1.touched}" class="col-xs-3" id="bloc3 ">
+                     Date of Birth<input type="date" id="" name="" formControlName="dob1" class="form-control" />
+                     <span class="alert-danger" *ngIf="fn.dob1.invalid && (fn.dob1.touched || fn.dob1.dirty)">Can not be left blank</span>
+                    </div><br>
+                    &nbsp;   <div id="bloc4">
+                     Select your gender:    &nbsp;<input type="radio" value="Male" name="gender" formControlName="gender" id="rdoMale"><label for="rdoMale">Male</label>
+                    &nbsp;<input type="radio" value="Female" name="gender" formControlName="gender" id="rdoFemale"><label for="rdoFemale">Female</label>
+                    &nbsp;<input type="radio" value="Others" name="gender" formControlName="gender" id="rdoOther"><label for="rdoOther">Others</label>
+                   </div><br><br><br>
+                    <div [ngClass]="{'has-error':fn.height.errors && fn.height.touched}" class="col-xs-3" id="bloc5 ">
+                     <input type="number" id="" name="" formControlName="height" class="form-control" placeholder="Height">
+                     <span class="alert-danger" *ngIf="fn.height.errors && (fn.height.touched || fn.height.dirty)">Can not be left blank</span>
+                    </div>
+                    <div [ngClass]="{'has-error':fn.weight.errors && fn.weight.touched}" class="col-xs-3" id="bloc6 ">
+                     <input type="number" id="" name="" formControlName="weight" class="form-control" placeholder="Weight">
+                     <span class="alert-danger" *ngIf="fn.weight.errors && (fn.weight.touched || fn.weight.dirty)">Can not be left blank</span>
+                    </div>
+         <br><br>
+     
+           <div class="page-header">
+             <h4>Personal contact details</h4>
+             </div>
+            <div [ngClass]="{'has-error':fn.mailid.errors && fn.mailid.touched}" class="col-xs-4" id="bloc7">
+             <input type="text" id="" name="" formControlName="mailid" class="form-control" placeholder="Enter your Email id">
+             <span class="alert-danger" *ngIf="fn.mailid.errors && (fn.mailid.touched || fn.mailid.dirty)">Can not be left blank</span>
+            </div>
+            <div class="col-xs-4" id="bloc8">
+            <input type="number" id="" name="" formControlName="phoneno" class="form-control" placeholder="Enter your phone number">
+            </div><br><br>
+            <div class="page-header">
+             <h4>Enter your address here</h4>
+             </div>
+            <div [ngClass]="{'has-error':fn.address.errors && fn.address.touched}">
+             <textarea name="" formControlName="address"  class="form-control" id="txtarea" spellcheck="false" placeholder="Enter your address here"></textarea>
+             <span class="alert-danger" *ngIf="fn.address.errors && (fn.address.touched || fn.address.dirty)">Can not be left blank</span>
+            </div>
+            <div class="page-header">
+             <h4>Blood donation information</h4>
+             </div>
+            <div class="col-xs-3" id="bloc9">
+             <select name="" formControlName="bloodgroup" class="form-control">
+                 <option value="" disabled selected>Select blood group</option>
+                 <option value="A+">A+</option>
+                 <option value="A-">A-</option>
+                 <option value="B+">B+</option>
+                 <option value="B-">B-</option>
+                 <option value="O+">O+</option>
+                 <option value="O-">O-</option>
+                 <option value="AB+">AB+</option>
+                 <option value="AB-">AB-</option>
+               </select>   
+            </div>
+            
+           <br>
+     
+           <br>
+     
+           <div>
+            
+                 <div class = "form-group form-inline col-md-12 mb-3">
+                     <div class="form-check form-check-inline" id="bloc10">
+                         <b>Have you ever donated blood?*</b><br>
+                         <input class="form-check-input" type="radio" formControlName = "flag"  value = "Y" (ngModelChange)="radioValueCheck(1)" >
+                         <label class="form-check-label">Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" formControlName = "flag" value = "N" (ngModelChange)="radioValueCheck(2)" >
+                         <label class="form-check-label">No</label>
+                     </div>
+                 </div> 
+             &nbsp;
+                     <div id="bloc11">
+                         <label> If you have donated blood please put the last date:*</label>
+                         <div class="input-group">
+                             <br><input type="date" name="" class="form-control" placeholder="dd/mm/yyyy" formControlName="ldd"  [attr.disabled]="showInputFlg ? 'disabled' : null">
+                         </div>
+                     </div>
+                 </div>
+         <br><br>
+         <p>
+         <input type="button" id="sb" value="Update details" class="btn btn-success" (click)=" fnUpdate()"/>
+         &nbsp;<input type="button" id="del" value="Cancel request" class="btn btn-danger" (click)="fnDelete()"/>
+         &nbsp;<input type="reset" id="res" value="Reset"  class="btn btn-primary"/>
+      
+         
+     
+         
+     </form>
+     
+                  
+                  
+                          
+                  
+             
+          <!-- <p align="center"><button name="back" id="bck" value="Go back" class="btn btn-warning btn-lg" (click)="navigateToBack()"><span class="glyphicon glyphicon-home"></span></button></p> -->
+        </div>
+        <div class="col-md-2"></div>
+      
+      
+      
+        </div>
+
+      </div>
+    </div>
+    <br><br><br>
+    
+    <footer class="bg-primary text-white text-center text-lg-start" style="background-image: url('https://www.emaildesignreview.com/wp-content/uploads/2018/12/abstract-background-1024x273.jpg');">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <br><br>
+      
+              <div>
+                <!-- <button type="button" class="btn btn-primary btn-lg" (click)="navigateToHelp()">Help Desk</button> -->
+              </div>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase"><b><i>Connections made</i></b></h5>
+      
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <b>12974 Blood donors registered</b>
+                </li>
+                <li>
+                  <b>16580 Request serverd for blood</b>
+                </li>
+                <li>
+                  <b>977 donors made in 30 days</b>
+                </li>
+                <li>
+                  47 donors registered to donate
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0"><b><i>Contact Us</i></b></h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  Address:
+                </li>
+                <li>
+                  National Blood Bank
+                </li>
+                <li>
+                  123, Safardargunj Road,
+                </li>
+                <li>
+                  New Delhi-100041, Delhi(India)
+                </li>
+                <br>
+                <li>
+                  Email Id:
+                </li>
+                <li>
+                  <a href="#">mayhelpyou@nbb.co.in</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3">
+          © 2020 Copyright:
+          <a class="text-white" href="http://localhost:4200/">nbbank.co.in</a> .All right reserved
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+    
+
+    
+    
+    
+    

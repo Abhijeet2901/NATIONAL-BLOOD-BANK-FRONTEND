@@ -1,95 +1,153 @@
-<div class="container">
+<div class="regbg">
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-billboard">
+        <div class="img"></div>
+          <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+        <h2><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="80" height="80" /> <i>National Blood Bank</i></h2>
+        <!-- <p>National Blood Bank is an initiative to connect, digitize and streamline the work flow of blood banks across the nation</p> -->
+      </div>
+    <div class="col-md-2">
+        <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="110"></h1>
+      </div>
+      <div class="col-md-2">
+        <h1><img src="https://cdn.freebiesupply.com/logos/large/2x/who-logo-png-transparent.png" width="150" height="110"></h1>
+      </div>
+        
+     </div>
+   </div>
+   
+    </div>
+    <div class="container">
     <div class="row">
-        <div class="col-md-5"></div>
-        <div class="col-md-5">
-<h1 style="text-align:center; color:red">Registration Form</h1>
-<form [formGroup]="genregForm" name="myForm" ngNativeValidate>
-
-    <div [ngClass]="{'has-error':f.id.errors && (f.id.touched || f.id.dirty)}">
-        ID:   
-       <input type="text" name="" ng-model="id" class="form-control"  placeholder="Id" formControlName="id">
-       <span *ngIf="f.id.errors && (f.id.touched || f.id.dirty)">
-           * Invalid ID
-           <span *ngIf="f.id.errors.requried">
-               *Required Field
-           </span>
-       </span>
-       </div>
- 
-    <div [ngClass]="{'has-error':f.Fname.errors && (f.Fname.touched || f.Fname.dirty)}">
- Firstname:   
-<input type="text" name="name" ng-model="name" class="form-control" pattern="[a-zA-Z][a-zA-Z ]+" placeholder="Enter your Firstname" formControlName="Fname">
-<span *ngIf="f.Fname.errors && (f.Fname.touched || f.Fname.dirty)">
-    * Invalid name
-    <span *ngIf="f.Fname.errors.requried">
-        *Required Field
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+<!-- <h1 style="text-align:center; color:red">Registration Form</h1> -->
+<div class="regform">
+    <div class="page-header">
+        <h2 style="color: #000000; text-align: center;">New user registration</h2>
+    </div>
+<form [formGroup]="genregForm"  ngNativeForm>
+    <input type="hidden" class="form-control" placeholder="Enter Id" formControlName="id"> 
+    
+    <br>
+        <div [ngClass]="{'has-error':f.fname.errors && (f.fname.touched || f.fname.dirty)}" 
+        id="bloc1">
+    <input type="text" name="firstname" ng-model="name" id="firstname" pattern="[a-zA-Z][a-zA-Z ]+" 
+    class="form-control" placeholder="Enter your Firstname" formControlName="fname" required>
+    <span *ngIf="f.fname.errors && (f.fname.touched || f.fname.dirty)">
+        * Invalid Firstname
+        <span *ngIf="f.fname.errors.requried">
+            *Required Field
+        </span>
     </span>
-</span>
-</div>
-<br>
-
-<p style="color:black;">Lastname:</p>
-<input type="text" name="Lname" class="form-control" placeholder="Enter your Lastname" formControlName="name" required>
-<br>
-
-<div [ngClass]="{'has-error':f.Mailid.errors && (f.Mailid.touched || f.Mailid.dirty)}">
-<p style="color:black;">Mail:</p>
-<input type="text"  class="form-control" formControlName="Mailid" placeholder="e.g: abc@gmail.com" required>
-<span *ngIf="f.Mailid.errors && (f.Mailid.touched || f.Mailid.dirty)">
-    * Invalid Mailid
-    <span *ngIf="f.Mailid.errors.requried">
-        *Required Field
+    </div>
+    <br><br><br>
+    
+    
+    <div [ngClass]="{'has-error':f.lname.errors && (f.lname.touched || f.lname.dirty)}"> 
+    <!-- <p style="color:black;">Lastname:</p> -->
+    <input type="text" name="lastname" ng-model="name" id="lastname" pattern="[a-zA-Z][a-zA-Z ]+" 
+    class="form-control" placeholder="Enter your Lastname" formControlName="lname" required>
+    <span *ngIf="f.lname.errors && (f.lname.touched || f.lname.dirty)">
+        * Invalid Lastname
     </span>
-</span>
-</div>
-
-<br>
-
-<div [ngClass]="{'has-error':f.Phoneno.errors && (f.Phoneno.touched || f.Phoneno.dirty)}">
-<p style="color:black;">Phone Number :</p>
-<input type="number" class="form-control" formControlName="Phoneno" maxlength="10" placeholder="Contact No" required >
-<span *ngIf="f.Phoneno.errors && (f.Phoneno.touched || f.Phoneno.dirty)">
-    * Invalid Phone Number
-    <span *ngIf="f.Phoneno.errors.requried">
-        *Required Field
+    </div>
+    <br><br><br>
+    
+    <div [ngClass]="{'has-error':f.emailid.errors && (f.emailid.touched || f.emailid.dirty)}">
+    <!-- <p style="color:black;">Mail:</p> -->
+    <input type="text"  class="form-control" formControlName="emailid" placeholder="e.g: abc@gmail.com" required>
+    <span *ngIf="f.emailid.errors && (f.emailid.touched || f.emailid.dirty)">
+        * Invalid Mailid
+        <span *ngIf="f.emailid.errors.requried">
+            *Required Field
+        </span>
     </span>
-</span>
-</div>
-<br>
-
-<div [ngClass]="{'has-error':f.Password.errors && (f.Password.touched || f.Password.dirty)}">
-<p style="color:black;">Password:</p>
-<input type="text" class="form-control" formControlName="Password" placeholder="Enter the Password" required>
-<span *ngIf="f.Password.errors && (f.Password.touched || f.Password.dirty)">
-    * Invalid Password
-    <span *ngIf="f.Password.errors.requried">
-        *Required Field
+    </div>
+    <br><br><br>
+    
+    
+    
+    <div [ngClass]="{'has-error':f.phoneno.errors && (f.phoneno.touched || f.phoneno.dirty)}">
+    <!-- <p style="color:black;">Phone Number :</p> -->
+    <input type="number" class="form-control" formControlName="phoneno" maxlength="10"
+     placeholder="Contact No" required >
+    <span *ngIf="f.phoneno.errors && (f.phoneno.touched || f.phoneno.dirty)">
+        * Invalid Phone Number
+        <span *ngIf="f.phoneno.errors.requried">
+            *Required Field
+        </span>
     </span>
-</span>
-</div>
-<br>
-
-<div [ngClass]="{'has-error':f.ConfirmPwd.errors && (f.ConfirmPwd.touched || f.ConfirmPwd.dirty)}">
-<p style="color:black;">ConfirmPassword:</p>
-<input type="text" class="form-control" formControlName="ConfirmPwd" placeholder="Enter the Confirm Password" required>
-<span *ngIf="f.ConfirmPwd.errors && (f.ConfirmPwd.touched || f.ConfirmPwd.dirty)">
-    * Invalid Password
-    <span *ngIf="f.ConfirmPwd.errors.requried">
-        *Required Field
+    </div>
+    <br><br><br>
+    
+    <div [ngClass]="{'has-error':f.password.errors && (f.password.touched || f.password.dirty)}">
+    <!-- <p style="color:black;">Password:</p> -->
+    <input [type]="passType" class="form-control" formControlName="password" placeholder="Create Password" required>
+    <span *ngIf="f.password.errors && (f.password.touched || f.password.dirty)">
+        * Invalid Password
+        <span *ngIf="f.password.errors.requried">
+            *Required Field
+        </span>
     </span>
-</span>
-</div>
-<br>
+    <!-- <input type="checkbox" (click)="changePasswordType()">Show password -->
+    </div>
+    <br><br><br>
+    <div [ngClass]="{'has-error':f.confirmpassword.errors && (f.confirmpassword.touched || f.confirmpassword.dirty)}">
+        
+        <!-- <p style="color:black;">ConfirmPassword:</p> -->
+        <input [type]="passType" class="form-control" formControlName="confirmpassword" placeholder="Enter the Confirm Password" required>
+        <div *ngIf="f.confirmpassword.touched && f.confirmpassword.invalid" class="alert alert-danger">
+            <div *ngIf="f.confirmpassword.errors.required">Password is required.</div>
+            <div *ngIf="f.confirmpassword.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+        </div>
+        <input type="checkbox" (click)="changePasswordType()">Show password
+        <!-- <div *ngIf="f.confirm_password.errors.confirmedValidator">Password and Confirm Password must be match.
+        </div>   -->
+        </div>
+        <br>
+       <!-- <div class="invalid-feedback" *ngIf="newAccountForm.errors?.mismatch && 
+     (newAccountForm.controls['repeatNewPassword'].dirty || newAccountForm.controls['repeatNewPassword'].touched)">
+       Passwords don't match.
+     </div> -->
+    
+    <!-- <input type="text" name="" formControlName="generatedOtp" [value]="gotp" /><br> 
+     <br>
+    <div>
+    <input type="text" name="" formControlName="enteredOtp" id="" class="form-control" placeholder="Enter OTP"/><br>
+     <div class="invalid-feedback" *ngIf="genregForm.errors?.mismatch && 
+     (genregForm.controls['enteredOtp'].dirty || genregForm.controls['enteredOtp'].touched)">
+       Passwords don't match.
+     </div> 
+    <input type="button" class="btn btn-info" id="otp" value="Generate otp" (click)="fnOtp()">
 
-<input type="Button" value="Submit" class="btn btn-success" (click)="fnCreateGenreg()">&nbsp;
+    <br><br>
+    
+    
+</div> -->
 
-<input type="reset" value="Reset" class="btn btn-info">
+<div>
+    <input type="checkbox" name="tnc" id="tnc" formControlName="tnc" required/><label for="tnc">Agree to our terms & condition</label>
+</div> 
+
+    <br><br><br><br>
+    <p>
+   <button value="SignUp" id="sub" class="btn btn-success" (click)="fnAddUser()">SignUp</button>&nbsp;
+    <input type="reset" id="res" value="Reset" class="btn btn-warning"/>
+</p>
 </form>
+</div>
+<!-- {{genregForm.value | json}} -->
 <br>
 </div>
 <div class="col-md-2"></div>
 </div>
 </div>
+</div>
+</div>
+
 
 <!--<table class="table table-hover table-striped" border="1">
 <thead>

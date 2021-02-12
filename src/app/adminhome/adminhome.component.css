@@ -1,0 +1,10 @@
+.bg
+{
+    background-image: url("https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg");
+    height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

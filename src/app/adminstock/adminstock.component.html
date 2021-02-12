@@ -1,0 +1,57 @@
+<div class="bsrch">
+    <div class="page-header" >  
+    <h1 style="color: #000000;text-align: center; font-family: 'Times New Roman', Times, serif;"><b> Get a view of our blood stock</b></h1>
+    <br>
+    </div>
+    <!-- <p class="round" style="font-family: 'Times New Roman', Times, serif;"><b>*1811=O+,1812=O-,1813=AB+,1814=AB-,1815=A+,1816=A-,1817=B+,1818=B-</b></p>
+    <div style="font-family: 'Times New Roman', Times, serif;">
+    <b>select BloodGroup Id:</b>
+    <select name="ddlId" id="" [(ngModel)]="id" (change)="fnGetBloodStockById()">
+        <option *ngFor="let t of bloodStocks" [value]="t.id">{{t.id}}</option>
+    </select>
+    </div><br><br> -->
+   
+ 
+    <form [formGroup]=" bloodStockForm" style="font-family: 'Times New Roman', Times, serif;" ngNativeForm>
+       <div class="col-xs-4">
+       <b> Id:</b>
+        <input class="form-control" type="number" formControlName="id" readonly required>
+    </div>
+    <div class="col-xs-4">
+        <b>BloodGroup:</b>
+        <input class="form-control" type="text" formControlName="bloodGroup" readonly required>
+    </div>
+    <div class="col-xs-4">
+        <b>TotalUnits:</b>
+        <input class="form-control" type="text" formControlName="noOfUnits" required>
+    </div>
+        <br><br><br><br>
+        
+         <!-- <input type="button" value="Add" class="btn btn-success" (click)="fnAddTodo()"/>&nbsp; -->
+         <input type="Button" value="Update" class="btn btn-info" (click)="fnUpdateBloodStock()"/>&nbsp;
+         <input type="reset" value="Reset" class="btn btn-warning">
+    
+        </form>
+        <br><br><br><br>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <th>ID</th>
+            <th>BloodGroup</th>
+            <th>TotalUnits</th>
+            <th></th>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of bloodStocks">
+                <td><b>{{ t.id }}</b></td>
+                <td><b>{{ t.bloodGroup}}</b></td>
+                <td><b>{{ t.noOfUnits}}</b></td>
+                <td><button class="btn btn-info" (click)="fn(t.id)">Select</button></td>
+                       
+                
+            </tr>
+        </tbody>
+        </table>
+    </div>
+        
+    

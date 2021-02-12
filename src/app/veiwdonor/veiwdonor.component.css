@@ -1,0 +1,90 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.ddnr
+{
+    border: 1px  ;
+    padding: 20px;
+    border-radius: 25px;
+    transition: .5s ease;
+}
+.ddnr:hover
+{
+    -moz-box-shadow: 0 0 50px #000000;
+    -webkit-box-shadow: 0 0 50px #000000;
+    box-shadow: 0 0 50px #000000;
+}
+
+.jumbotron
+{
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
+  background-size: cover;
+  height:200px;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #sb
+  {
+    position:relative;
+    transition: .5s ease;
+    left: 170px;
+    right: -420px; 
+  }
+  #sb:hover
+  {
+    -webkit-transform: scale(1.25);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+  }
+
+  #del
+  {
+    position:relative;
+    transition: .5s ease;
+    left: 230px;
+    right: -420px;
+  }
+  #del:hover
+  {
+    -webkit-transform: scale(1.25);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+  }
+
+  #res
+  {
+    position:relative;
+    transition: .5s ease;
+    left: 300px;
+    right: -420px;
+  }
+  #res:hover
+  {
+    -webkit-transform: scale(1.25);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+  }
+
+  #bck
+  {
+    transition: .5s ease;
+  }
+  #bck:hover
+  {
+    -webkit-transform: scale(1.25);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+  }

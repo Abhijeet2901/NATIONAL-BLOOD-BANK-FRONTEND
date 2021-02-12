@@ -1,1 +1,152 @@
-<p>adminhome works!</p>
+
+<div class="bg">
+    <div class="container-fluid"> 
+      
+       <div class="img"></div>
+         <div class="container">
+       <div class="row">
+         <div class="col-md-8">
+       <h1><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="70" height="50" /> <i>National Blood Bank</i></h1>
+       <!-- <p>National Blood Bank is an initiative to connect, digitize and streamline the work flow of blood banks across the nation</p> -->
+     </div>
+   <div class="col-md-2">
+       <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="100"></h1>
+     </div>
+     <div class="col-md-2">
+       <h1><img src="https://siop-online.org/wp-content/uploads/2015/09/who-logo-new-vertical.jpg" width="150" height="100"></h1>
+     </div>
+       
+    </div>
+  </div>
+  
+   <br><br>
+   
+  
+     <div class="row">
+      
+    <div>
+      
+       <div class="col-md-2">
+        <div>
+            <nav class="navbar">
+              <div class="container-fluid">
+                <ul class="nav">
+                    
+                  <!-- <li class="active"><a [routerLink]="['./home']"><span class="glyphicon glyphicon-home"></span>&nbsp;<i>Home</i></a></li> -->
+                  <li><a [routerLink]="['./adminreq']"><span class="glyphicon glyphicon-tint"></span>&nbsp;<i>Request for blood</i></a></li>
+                  <li><a [routerLink]="['./admindonor']"> <span class="glyphicon glyphicon-star"></span>&nbsp;<i>Become a Donor</i></a></li>
+                  <li><a [routerLink]="['./adminstock']"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;<i>Get a view to blood Stocks</i></a></li> 
+                  <!-- <li><a [routerLink]="['./ref']"><span class="glyphicon glyphicon-certificate"></span>&nbsp;<i>Other references</i></a></li> -->
+                  <!-- <li><a [routerLink]="['./gall']"><span class="glyphicon glyphicon-picture"></span>&nbsp;<i>Gallery</i></a></li> -->
+                  <!-- <li><a [routerLink]="['./about']"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;<i>About</i></a></li> -->
+                
+                
+                  <li><a><span class="glyphicon glyphicon-log-out"></span><i><input type="button" class="btn btn-link" (click)="fnLogout()" value="Logout"/></i></a></li>
+                  <!-- <li><a [routerLink]="['./regis']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+       
+       </div>
+       <div class="col-md-8">
+       
+         <router-outlet></router-outlet>
+       </div>
+       <div class="col-md-2">
+       
+       </div>
+      
+     </div>
+   </div>
+   <br><br>
+   <div class="row">
+     <div class="col-md-2">
+   
+     </div>
+     <div class="col-md-8">
+     
+   </div>
+   <div class="col-md-2">
+   
+   </div>
+   </div>
+ 
+   <br>
+   </div>
+   </div>
+   <footer class="bg-primary text-white text-center text-lg-start" style="background-color:  #808080;">
+     <!-- Grid container -->
+     <div class="container p-4">
+       <!--Grid row-->
+       <div class="row">
+         <!--Grid column-->
+         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+           <br><br>
+   
+           <div>
+             <!-- <button type="button" class="btn btn-primary btn-lg" (click)="navigateToHelp()">Help Desk</button> -->
+           </div>
+         </div>
+         <!--Grid column-->
+   
+         <!--Grid column-->
+         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+           <h5 class="text-uppercase"><b><i>Connections made</i></b></h5>
+   
+           <ul class="list-unstyled mb-0">
+             <li>
+               <b>12974 Blood donors registered</b>
+             </li>
+             <li>
+               <b>16580 Request serverd for blood</b>
+             </li>
+             <li>
+               <b>977 donors made in 30 days</b>
+             </li>
+             <li>
+               47 donors registered to donate
+             </li>
+           </ul>
+         </div>
+         <!--Grid column-->
+   
+         <!--Grid column-->
+         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+           <h5 class="text-uppercase mb-0"><b><i>Contact Us</i></b></h5>
+   
+           <ul class="list-unstyled">
+             <li>
+               Address:
+             </li>
+             <li>
+               National Blood Bank
+             </li>
+             <li>
+               123, Safardargunj Road,
+             </li>
+             <li>
+               New Delhi-100041, Delhi(India)
+             </li>
+             <br>
+             <li>
+               Email Id:
+             </li>
+             <li>
+               <a href="#">mayhelpyou@nbb.co.in</a>
+             </li>
+           </ul>
+         </div>
+         <!--Grid column-->
+       </div>
+       <!--Grid row-->
+     </div>
+     <!-- Grid container -->
+   
+     <!-- Copyright -->
+     <div class="text-center p-3" style="background-color: #404040">
+       © 2020 Copyright:
+       <a class="text-white" href="http://localhost:4200/">nbbank.co.in</a> .All right reserved
+     </div>
+     <!-- Copyright -->
+   </footer>

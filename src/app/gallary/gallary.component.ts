@@ -11,7 +11,7 @@ export class GallaryComponent implements OnInit {
     image: 'https://gulmohargreens.com/wp-content/uploads/2018/10/IMG_1894.jpg',
     thumbImage: 'https://gulmohargreens.com/wp-content/uploads/2018/10/IMG_1894.jpg',
     alt: 'alt of image',
-    title: 'title of image'
+    title: 'Image1'
   }, {
     image: 'https://img.etimg.com/thumb/width-640,height-480,imgsize-71857,resizemode-1,msid-48376181/news/defence/over-400-army-personnel-take-part-in-blood-donation-camp.jpg',
     thumbImage: 'https://img.etimg.com/thumb/width-640,height-480,imgsize-71857,resizemode-1,msid-48376181/news/defence/over-400-army-personnel-take-part-in-blood-donation-camp.jpg',

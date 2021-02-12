@@ -1,9 +1,9 @@
 <div class="bsrch">
 <div class="page-header" >  
-<h1 style="color: #000000;text-align: center; font-family: 'Times New Roman', Times, serif;"><b> Search for BloodGroup</b></h1>
+<h1 style="color: #000000;text-align: center; font-family: 'Times New Roman', Times, serif;"><b> Get a view of our blood stock</b></h1>
 <br>
 </div>
-<p class="round" style="font-family: 'Times New Roman', Times, serif;"><b>*101=O+,102=O-,103=AB+,104=AB-,105=A+,106=A-,107=B+,108=B-</b></p>
+<!--<p class="round" style="font-family: 'Times New Roman', Times, serif;"><b>*101=O+,102=O-,103=AB+,104=AB-,105=A+,106=A-,107=B+,108=B-</b></p>
 <div style="font-family: 'Times New Roman', Times, serif;">
 <b>select BloodGroup Id:</b>
 <select name="ddlId" id="" [(ngModel)]="id" (change)="fnGetTodoById()">
@@ -30,19 +30,19 @@
      <input type="reset" value="Reset" class="btn btn-warning">
 
     </form>
-    <br><br><br><br>
+    <br><br><br><br>-->
 <table class="table table-hover table-striped">
-    <thead>
+    <thead class="thead-dark">
         <th>ID</th>
         <th>BloodGroup</th>
         <th>TotalUnits</th>
         
     </thead>
     <tbody>
-        <tr *ngFor="let t of todos">
-            <td>{{ t.id }}</td>
-            <td>{{ t.userId}}</td>
-            <td>{{ t.title}}</td>
+        <tr *ngFor="let t of bloodStocks">
+            <td><b>{{ t.id }}</b></td>
+            <td><b>{{ t.bloodGroup}}</b></td>
+            <td><b>{{ t.noOfUnits}}</b></td>
                    
             
         </tr>

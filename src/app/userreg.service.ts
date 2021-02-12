@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserregService {
 
-  url:string="http://localhost:3000/userreg/"
+  url:string="http://localhost:8080/request/";
   constructor(private http:HttpClient) { }
 
   getuserdata()
@@ -25,6 +25,16 @@ dataById(id:any)
 
   updateUser(data:any)
   {
-    return this.http.put(this.url+data.id,data);
+    return this.http.put(this.url,data);
+  }
+
+  deleteUser(id:number)
+  {
+    return this.http.delete(this.url+id);
+  }
+
+  getCurrentData(id:any)
+  {
+    return this.http.get("${this.url}/${id}");
   }
 }

@@ -1,7 +1,61 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.jumbotron
+{
+  background-image: url(https://www.teahub.io/photos/full/283-2838767_home-background-image-for-blood-bank.jpg);
+  background-size: cover;
+  height:200px;
+}
 .lgin
 {
-    background-color: #cceeff;
-    border: 1px solid   #003366;
-    padding: 15px;
+    
+    border: 1px  ;
+    padding: 20px;
     border-radius: 25px;
+    transition: .5s ease;
 }
+.lgin:hover
+{
+    -moz-box-shadow: 0 0 50px  #000000;
+      -webkit-box-shadow: 0 0 50px  #000000;
+      box-shadow: 0 0 50px  #000000;
+}
+.loginbg {
+    /* The image used */
+    /* background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg'); */
+    /* Full height */
+    background-image: url("E:\bloodbankapp\src\Screenshot (220).png");
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #logoblk1,#logoblk2
+  {
+     display: inline;
+  }
+
+  #lg
+  {
+    transition: .5s ease;
+  }
+  #lg:hover
+  {
+    -webkit-transform: scale(1.20);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.20);
+    -ms-transform: scale(1.20);
+    -o-transform: scale(1.20);
+  }
+
+  #rs
+  {
+    transition: .5s ease;
+  }
+  #rs:hover
+  {
+    -webkit-transform: scale(1.20);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.20);
+    -ms-transform: scale(1.20);
+    -o-transform: scale(1.20);
+  }

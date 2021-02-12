@@ -20,6 +20,12 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { VeiwdonorComponent } from './veiwdonor/veiwdonor.component';
+import { AdmindonorpartComponent } from './admindonorpart/admindonorpart.component';
+import { AdminrequestComponent } from './adminrequest/adminrequest.component';
+import { AdminstockComponent } from './adminstock/adminstock.component';
+import { EditrequestComponent } from './editrequest/editrequest.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +44,12 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     GallaryComponent,
     UserhomeComponent,
     AdminhomeComponent,
+    VeiwdonorComponent,
+    AdmindonorpartComponent,
+    AdminrequestComponent,
+    AdminstockComponent,
+    EditrequestComponent,
+    ForgotPasswordComponent,
     
   ],
   imports: [

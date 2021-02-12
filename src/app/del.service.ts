@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class DelService {
 
-  url:string="http://localhost:3000/userreg/"
+  url:string="http://localhost:8080/request/";
   constructor(private http:HttpClient) { }
 
   findalldata()

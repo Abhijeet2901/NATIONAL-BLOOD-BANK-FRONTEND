@@ -1,25 +1,101 @@
+<div class="loginbg">
+<div class="container-fluid">
+    <!-- <div class="jumbotron jumbotron-billboard"> -->
+        <div class="img"></div>
+          <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <br>
+        <h2><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="80" height="80" /> <i>National Blood Bank</i></h2>
+        <!-- <p>National Blood Bank is an initiative to connect, digitize and streamline the work flow of blood banks across the nation</p> -->
+      </div>
+    <div class="col-md-2">
+        
+        <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="110"></h1>
+    
+    
+      </div>
+      <div class="col-md-2">
+        <h1><img src="https://cdn.freebiesupply.com/logos/large/2x/who-logo-png-transparent.png" width="150" height="110"></h1>
+      </div>
+        
+     </div>
+   </div>
+   
+    <!-- </div> -->
+    
+    <!-- <hr> -->
+    <br><br>
+    <div class="row">
+        <div class="col-md-8">
+
+        </div>
+        <div class="col-md-4">
 <div class="lgin">
-<div class="page-header" style="background-color: 	#004466;">
+<div class="page-header" >
 <h2 style="color:#000000">Log In</h2>
 </div>
 <form [formGroup]="loginForm" ngNativeValidate>
-    <div [ngClass]="{'has-error':f.userId.errors && f.userId.touched}" class="input-group">
+    <div [ngClass]="{'has-error':f.email.errors && f.email.touched}" class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
-    <input type="text" id="un" formControlName="userId" class="form-control" placeholder="User ID"><br>
-    <span class="alert-danger" *ngIf="f.userName.errors && (f.userId.touched || f.userId.dirty)">User Name must be atleast 4 characters</span>
+    <input type="text" id="un" formControlName="email" class="form-control" placeholder="Email ID"><br>
+    <span class="alert-danger" *ngIf="f.email.errors && (f.email.touched || f.email.dirty)">*Enter valid email id</span>
     </div><br>
     <div [ngClass]="{'has-error':f.password.errors && f.password.touched}" class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input type="password" id="pw" formControlName="password" class="form-control" placeholder="Password"><br>
-    <span class="alert-danger" *ngIf="f.password.errors && (f.password.touched || f.password.dirty)">Password must be atleast 8 characters</span>
+    <input [type]="jpwd" id="pw" formControlName="password" class="form-control" placeholder="Password"  ><br>
+    <span class="alert-danger" *ngIf="f.password.errors && (f.password.touched || f.password.dirty)">*Enter valid password</span>
 </div><br><br>
+<div>
+<p><input type="checkbox" class="form-check-input" name="" id="pwdVisibility" (change)="fnTogglePassword()"><label for="pwdVisibility" class="form-check-label" style="color: white;">Show Password</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<button class="btn btn-link" name="" id="" (click)="navigateToForgotps()"><b style="color: crimson;">Forgot Password?</b></button></div>
 <p align="center">
-<button type="submit" value="Submit" class="btn btn-primary" (click)="navigateToLogin()">Log In</button>
-&nbsp;<button type="reset"  value="Reset"  class="btn btn-primary">Cancel</button><br><br>
-New user? then<button type="submit" value="Submit" class="btn btn-link" (click)="navigateToSignup()">Sign Up</button>here!
+<button type="submit" id="lg" value="Submit" class="btn btn-success" (click)=" loginUser()">Log In</button>
+&nbsp;<button type="reset" id="rs" value="Reset"  class="btn btn-primary">Cancel</button><br><br>
+<b style="color: #ffffff;">New user? then</b><button type="button" class="btn btn-link" (click)="navigateToSignup()"><b>Click here!</b></button>
 </p>
+
+
+
 </form>
+
 </div>
+</div>
+</div>
+</div>
+<br><br>
+<br><br>
 <br>
+<br>
+<br>
+
+    <div class="text-center p-3">
+     <b style="color: #ffffff;"> © 2020 Copyright:</b>
+      <a class="text-white" href="http://localhost:4200/"><b>nbbank.co.in</b></a> <b style="color:  #ffffff;;">.All rights reserved</b>
+    </div>
+    <!-- Copyright -->
+  </div>
+
+  <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="background-image: url('https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg')">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New Registration</h4>
+        </div>
+        <div class="modal-body">
+         
+          <br><br><br>
+          <app-regi></app-regi>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
 
 

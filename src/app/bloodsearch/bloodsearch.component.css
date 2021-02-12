@@ -16,13 +16,14 @@
       border: 1px  ;
       padding: 20px;
       border-radius: 25px;
+      transition: .5s ease;
     /* border: 1px solid  #800000;
     padding: 20px;
     */
 }
 .bsrch:hover
     {
-      -moz-box-shadow: 0 0 50px #808080;
-      -webkit-box-shadow: 0 0 50px #808080;
-      box-shadow: 0 0 50px #808080;
+      -moz-box-shadow: 0 0 50px #000000;
+      -webkit-box-shadow: 0 0 50px #000000;
+      box-shadow: 0 0 50px #000000;
     }

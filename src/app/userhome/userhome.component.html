@@ -5,14 +5,14 @@
          <div class="container">
        <div class="row">
          <div class="col-md-8">
-       <h1><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="70" height="50" /> <i>National Blood Bank</i></h1>
+       <h2><a style="text-decoration:none; color:crimson" [routerLink]="['./home']"><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="80" height="80" /> <i>National Blood Bank</i></a></h2>
        <!-- <p>National Blood Bank is an initiative to connect, digitize and streamline the work flow of blood banks across the nation</p> -->
      </div>
    <div class="col-md-2">
-       <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="100"></h1>
+       <h1><img src="https://seeklogo.com/images/I/indian-government-logo-1C3F1925AA-seeklogo.com.png" width="150" height="110"></h1>
      </div>
      <div class="col-md-2">
-       <h1><img src="https://siop-online.org/wp-content/uploads/2015/09/who-logo-new-vertical.jpg" width="150" height="100"></h1>
+       <h1><img src="https://cdn.freebiesupply.com/logos/large/2x/who-logo-png-transparent.png" width="150" height="110"></h1>
      </div>
        
     </div>
@@ -32,12 +32,13 @@
            <li><a [routerLink]="['./about']"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;<i>About</i></a></li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
-           <li><a [routerLink]="['./login']"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <li><a><span class="glyphicon glyphicon-log-out"></span><i><input type="button" class="btn btn-link" (click)="fnLogout()" value="Logout"/></i></a></li>
            <!-- <li><a [routerLink]="['./regis']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
          </ul>
        </div>
      </nav>
    </div>
+   <div style="text-align:right;color:white;font-size: medium;"><b><i>Welcome,{{mail}}</i></b></div>
    <!-- <div class="row">
     <div class="col-md-8">
   <h1><img src="https://image.flaticon.com/icons/png/512/1297/1297136.png" width="150" height="100" /> <i>National Blood Bank</i></h1>
@@ -77,15 +78,16 @@
    </div>
    <br><br>
    <div class="row">
-     <div class="col-md-2">
+     <!-- <div class="col-md-2">
    
-     </div>
-     <div class="col-md-8">
+     </div> -->
+     <div class="col-md-12">
      <app-carousel></app-carousel>
+     <br><br>
    </div>
-   <div class="col-md-2">
+   <!-- <div class="col-md-2">
    
-   </div>
+   </div> -->
    </div>
    <!--<footer class="bg-light text-center text-lg-start">
      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3); padding-bottom: 150px;">
@@ -96,25 +98,28 @@
    </footer>-->
    <br>
    </div>
-   <footer class="bg-primary text-white text-center text-lg-start" style="background-color:  #808080;">
+   <footer class="bg-primary text-white text-center text-lg-start" style="background-image: url('https://www.emaildesignreview.com/wp-content/uploads/2018/12/abstract-background-1024x273.jpg');">
      <!-- Grid container -->
      <div class="container p-4">
        <!--Grid row-->
        <div class="row">
          <!--Grid column-->
-         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+         <div class="col-md-2">
            <br><br>
    
            <div>
-             <button type="button" class="btn btn-primary btn-lg" (click)="navigateToHelp()">Help Desk</button>
+             <button type="button" id="hlp" class="btn btn-info btn-lg" (click)="navigateToHelp()">Help Desk</button><br>
+             <!-- <button type="button"  (click)="navigateToAdmin()">Admin</button> -->
            </div>
          </div>
          <!--Grid column-->
    
          <!--Grid column-->
-         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-           <h5 class="text-uppercase"><b><i>Connections made</i></b></h5>
+         <br>
+         <div class="col-md-5" style="font-size: medium;">
+           <h4 class="text-uppercase"><b><i>Connections made</i></b></h4>
    
+           <br>
            <ul class="list-unstyled mb-0">
              <li>
                <b>12974 Blood donors registered</b>
@@ -126,15 +131,15 @@
                <b>977 donors made in 30 days</b>
              </li>
              <li>
-               47 donors registered to donate
+               <b>47 donors registered to donate</b>
              </li>
            </ul>
          </div>
          <!--Grid column-->
    
          <!--Grid column-->
-         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-           <h5 class="text-uppercase mb-0"><b><i>Contact Us</i></b></h5>
+         <div class="col-md-5" style="font-size: medium;">
+           <h4 class="text-uppercase mb-0"><b><i>Contact Us</i></b></h4>
    
            <ul class="list-unstyled">
              <li>
@@ -154,7 +159,7 @@
                Email Id:
              </li>
              <li>
-               <a href="#">mayhelpyou@nbb.co.in</a>
+               <a href="#" style="color: crimson;">mayhelpyou@nbb.co.in</a>
              </li>
            </ul>
          </div>
@@ -165,9 +170,9 @@
      <!-- Grid container -->
    
      <!-- Copyright -->
-     <div class="text-center p-3" style="background-color: #404040">
+     <div class="text-center p-3">
        © 2020 Copyright:
-       <a class="text-white" href="http://localhost:4200/">nbbank.co.in</a> .All right reserved
+       <a class="text-white" href="http://localhost:4200/" style="color: crimson;">nbbank.co.in</a> .All right reserved
      </div>
      <!-- Copyright -->
    </footer>

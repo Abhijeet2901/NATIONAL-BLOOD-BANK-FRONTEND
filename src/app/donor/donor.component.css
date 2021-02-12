@@ -45,15 +45,77 @@ textarea {
       border: 1px  ;
       padding: 20px;
       border-radius: 25px;
+      transition: .5s ease;
     /* border: 1px solid  #800000;
     padding: 20px;
     */
 }
 .grphic:hover
     {
-      -moz-box-shadow: 0 0 50px #808080;
-      -webkit-box-shadow: 0 0 50px #808080;
-      box-shadow: 0 0 50px #808080;
+      -moz-box-shadow: 0 0 50px #000000;
+      -webkit-box-shadow: 0 0 50px #000000;
+      box-shadow: 0 0 50px #000000;
     }
+
+    input[type="text"]:focus{
+        outline: none;
+        box-shadow: 0px 0px 50px  		#c69fc6 ;
+        border:1px solid #808080;
+        }
+        
+        input[type="text"]:hover{
+        border: 1px solid #999;
+        border-radius: 5px;
+        }
+        
+        input[type="text"]:focus:hover{
+        outline: none;
+        box-shadow: 0px 0px 50px 		#c69fc6;
+        border:1px solid #5AB0DB;
+        border-radius:5px;
+        
+        }
+
+        #sb
+        {
+            position:relative;
+            transition: .5s ease;
+            left: 250px;
+            right: -420px;
+        }
+        #sb:hover
+        {
+            -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+        }
+
+        #res
+        {
+            position:relative;
+            transition: .5s ease;
+            left: 300px;
+            right: -420px; 
+        }
+        #res:hover
+        {
+            -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+        }
+
+        #vd
+        {
+            transition: .5s ease;
+        }
+        #vd:hover
+        {
+            -webkit-transform: scale(1.07);/*Grows in size like Angry Birds button*/
+            -moz-transform: scale(1.07);
+            -ms-transform: scale(1.07);
+            -o-transform: scale(1.07);
+        }
 
     

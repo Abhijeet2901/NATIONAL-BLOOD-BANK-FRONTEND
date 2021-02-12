@@ -1,0 +1,51 @@
+<div class="duse">
+    <div class="page-header" >
+        <h2 style="color: #000000; text-align: center;">View & manage blood request</h2>
+    </div>
+    
+    <table  class="table table-bordered table-hover">
+        <thead>
+            <th style="text-align:center">Id</th>
+            <th style="text-align:center">First Name</th>
+            <th style="text-align:center">Last Name</th>
+            <th style="text-align:center">Age</th>
+            <th style="text-align:center">Gender</th>
+            
+            <th style="text-align:center">Email</th>
+            <th style="text-align:center">Phone</th>
+            <th style="text-align:center">Address</th>
+            <th style="text-align:center">Blood group required</th>
+            <th style="text-align:center">Units</th>
+            <th></th>
+            <th></th>
+            
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td><b>{{ u.id }}</b></td>
+                <td><b>{{ u. firstName }}</b></td>
+                <td><b>{{ u.lastName }}</b></td>
+                <td><b>{{ u.age }}</b></td>
+                <td><b>{{ u.gender | titlecase }}</b></td>
+                <td><b>{{ u.email }}</b></td>
+                <td><b>{{ u.contactNo }}</b></td>
+                <td><b>{{ u.address }}</b></td>
+                <td><b>{{ u.bloodGroup }}</b></td>
+                <td><b>{{ u.unit }}</b></td>
+                <td><input type="button" id="" name="approve" value="Approve request" class="btn btn-success" (click)="fnSendEmail(u.email,u.id,u.bloodGroup,u.unit)"/></td>
+                <td><input type="button" id="" name="delete" value="Deny" class="btn btn-danger" (click)="deleteRequest(u.id)"/></td>
+                
+                
+                
+                        
+                
+            </tr>
+        </tbody>
+        </table>
+    
+    <!-- <p align="center"><input type="button" name="back" id="" value="Go back" class="btn btn-danger btn-lg" (click)="navigateToBack()"/></p> -->
+    
+    
+    
+    </div>

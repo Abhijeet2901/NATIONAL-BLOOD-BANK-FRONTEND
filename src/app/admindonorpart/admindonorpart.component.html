@@ -1,0 +1,58 @@
+<div class="ddnr">
+    <div class="page-header" >
+        <h2 style="color: #000000; text-align: center;">View Donor's details</h2>
+    </div>
+    
+    <table  class="table table-bordered table-hover">
+        <thead>
+            <th style="text-align:center">Id</th>
+            <th style="text-align:center">First Name</th>
+            <th style="text-align:center">Last Name</th>
+            <th style="text-align:center">Age</th>
+            <th style="text-align:center">Gender</th>
+            <th style="text-align:center">Birth Date</th>
+            <th style="text-align:center">Height</th>
+            <th style="text-align:center">Weight</th>
+            <th style="text-align:center">Email</th>
+            <th style="text-align:center">Phone</th>
+            <th style="text-align:center">Address</th>
+            <th style="text-align:center">Blood Group</th>
+            <th style="text-align:center">Last blood donation</th>
+            <th style="text-align:center">Last donation date</th>
+            <th></th>
+            <th></th>
+            
+           
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of donorsData">
+                <td><b>{{ d.id }}</b></td>
+                <td><b>{{ d.firstname }}</b></td>
+                <td><b>{{ d.lastname }}</b></td>
+                <td><b>{{ d.age }}</b></td>
+                <td><b>{{ d.gender | titlecase }}</b></td>
+                <td><b>{{d.dob}}</b></td>
+                <td><b>{{d.height}}</b></td>
+                <td><b>{{d.weight}}</b></td>
+                <td><b>{{d.mailid}}</b></td>
+                <td><b>{{d.phoneno}}</b></td>
+                <td><b>{{d.address}}</b></td>
+                <td><b>{{d.bloodgroup}}</b></td>
+                <td><b>{{ d.flag }}</b></td>
+                <td><b>{{d.ldd}}</b></td>
+                <td><input type="button" name="invite" id="inv" value="Invite" class="btn btn-success" (click)="fnInviteMail(d.mailid,d.id)"/></td>
+                <td><input type="button" name="delete" id="del" value="Deny" class="btn btn-danger" (click)="fnDeleteDonor(d.id)"/></td>
+                
+                
+                        
+                
+            </tr>
+        </tbody>
+        </table> 
+        <!-- <p align="center"><input type="button" name="back" id="" value="Go back" class="btn btn-danger btn-lg" (click)="navigateToBack()"/></p> -->
+    
+    
+    
+    
+    
+    </div>

@@ -20,15 +20,16 @@
       border: 1px  ;
       padding: 20px;
       border-radius: 25px;
+      transition: .5s ease;
     /* border: 1px solid  #800000;
     padding: 20px;
     */
 }
 .scss:hover
     {
-      -moz-box-shadow: 0 0 50px #808080;
-      -webkit-box-shadow: 0 0 50px #808080;
-      box-shadow: 0 0 50px #808080;
+      -moz-box-shadow: 0 0 50px #000000;
+      -webkit-box-shadow: 0 0 50px #000000;
+      box-shadow: 0 0 50px #000000;
     }
      input[type="text"]:focus{
         outline: none;
@@ -65,49 +66,53 @@
     outline: 0; 
     background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CAD9E3), to(#FFFFFF)); 
     background: -moz-linear-gradient(top, #FFFFFF, #CAD9E3 1px, #FFFFFF 25px); 
-    box-shadow:  0px 0px 50px  #c69fc6 ; 
-    -moz-box-shadow:  0px 0px 50px  #c69fc6; 
-    -webkit-box-shadow:  0px 0px 50px  #c69fc6; 
+    box-shadow:  0px 0px 50px; 
+    -moz-box-shadow:  0px 0px 50p; 
+    -webkit-box-shadow:  0px 0px 50px; 
 
     } 
 
-    /* .wrapper{
-        width: 450px;
-        background: #fff;
-        padding: 30px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    #req
+    {
+        position:relative;
+    transition: .5s ease;
+    left: 300px;
+    right: -420px;
     }
-    .wrapper .input-data{
-        height: 40px;
-        width: 100%;
-        position: relative;
+  #req:hover
+  {
+    -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+  }
 
-    }
-    .wrapper .input-data input{
-        height: 100%;
-        width: 100%;
-        border: none;
-        font-size: 17px;
-        border-bottom: 2px solid silver;
-        
-    .input-data input:focus ~ label,
-    .input-data input:valid ~ label{
-
-        transform: translateY(-20px);
-        font-size: 15px;
-        color: #4158d0;
-
-    }    
-        
-    }
-    .wrapper .input-data label{
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        color: grey;
-        pointer-events: none;
-        transition: all 0.3s ease;
-    } */
+  #res
+  {
+    position:relative;
+    transition: .5s ease;
+    left: 350px;
+    right: -420px; 
+  }
+  #res:hover
+  {
+    -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+  }
+  #vw
+  {
+    /* position:relative; */
+    transition: .5s ease;
+  }
+  #vw:hover
+  {
+    -webkit-transform: scale(1.05);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+  }
 
 
     

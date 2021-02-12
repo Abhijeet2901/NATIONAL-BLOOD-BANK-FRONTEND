@@ -1,0 +1,158 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+
+
+            <div class="scss">
+                <div class="page-header">
+                    <h2 style="color: #000000; text-align: center;">Request for blood!</h2>
+                </div>
+
+                <form [formGroup]="userRequestForm"  ngNativeValidate>
+
+                    <!-- <div class="col-xs-2">
+                        <input type="text" id="" formControlName="id" class="form-control">
+
+                        
+
+                    </div><br><br> -->
+                    <div class="page-header">
+                        <h4>Enter your personal Details here</h4>
+                    </div>
+            
+                    <div  class="col-xs-6" id="blo1">
+                         <input type="text" name="" id="" formControlName="firstname" 
+                         class="form-control">  
+                          <!-- <label>First Name</label> -->
+                        
+                    </div>
+                
+
+                    <div  class="col-xs-6" id="blo2">
+                        <input type="text" name="" id="" formControlName="lastname" class="form-control">
+
+                       
+                    </div><br><br><br><br>
+
+                    <div  class="col-xs-3" id="blo3">
+                         <input type="text" name="" id="" formControlName="age" class="form-control">
+
+                        
+                    </div>&nbsp;
+
+
+                    &nbsp;<div id="blo4">
+                        <b>Gender:*</b> &nbsp; <input type="radio" name="gender" id="rdoMale" formControlName="gender" value="male"><label
+                            for="rdoMale">Male</label>&nbsp;
+                        <input type="radio" name="gender" id="rdoFemale" formControlName="gender" value="female"><label
+                            for="rdoFemale">Female</label>&nbsp;
+                        <input type="radio" name="gender" id="rdoOthers" formControlName="gender" value="others"><label
+                            for="rdoOthers">Others</label>&nbsp;
+
+                        
+                    </div>
+                    <br>
+
+                    <!-- <input type="checkbox" formControlName="gender">male
+        <input type="checkbox" formControlName="gender">female
+        <input type="checkbox" formControlName="gender">other
+        <br><br> -->
+
+                    <!-- Gender: <input  type="text" name="" id="" formControlName="gender"> <br><br> -->
+                    <div class="page-header">
+                        <h4>Enter your contact deatils here</h4>
+                    </div>
+                    <div class="col-xs-4" id="blo5">
+                    <input type="text" name="" id="" formControlName="email" class="form-control">
+                    </div>
+
+                    <div  class="col-xs-4" id="blo6">
+                        <input type="text" name="" id="" formControlName="contactno"
+                            class="form-control">
+                     
+                    </div><br><br><br><br>
+
+                    <div>
+                        <textarea type="text" name="" id="textArea" formControlName="address" class="form-control"
+                            rows="4"></textarea> <br><br>
+                    </div>
+                    <div class="page-header">
+                        <h4>Blood information here</h4>
+                    </div>
+        
+                        <!-- Blood Group:
+                        <select class="form-control" value="">
+                            <option>---Select Blood group---</option>
+                            <option>A+</option>
+                            <option>B+</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                        </select> -->
+                        <div  class="col-xs-3" id="blo7" class="form-group">
+                            <!-- <label for="bldgrp" class="col-sm-2 control-label"><b>Select blood group</b>:</label> -->
+                            <div class="col-sm-3">
+                            <select class="form-control selcls"  formControlName="bgp" id="bldgrp">
+                            <option value="" disabled selected>Select blood group</option>
+                              <option value="ap">A+</option>
+                              <option value="an">A-</option>
+                              <option value="bp">B+</option>
+                              <option value="bn">B-</option>
+                              <option value="abp">AB+</option>
+                              <option value="op">O+</option>
+                              <option value="on">O-</option>
+                            </select>          
+                              
+                            </div>
+                            
+                    </div>          
+                    
+                    
+                    <br><br>
+                       
+                    
+
+                    &nbsp;<div  class="col-xs-3" id="blo8">
+                        <input type="text" name="" id="" formControlName="unit"
+                            class="form-control">
+
+                        
+                    </div> <br><br><br><br><br>
+                    <p>
+                   
+                    <input type="submit" value="Update" class="btn btn-primary"><br>
+                </p>
+
+                   
+
+                   
+
+
+                    
+         
+
+                </form>
+
+            </div>
+            
+        </div>
+        <div class="col-md-2"></div>
+        <!--<div class="col-md-3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="button" value="Cancel your request for blood " class="btn btn-danger btn-block"
+            (click)="navigateToDelete()">
+
+
+        </div>-->
+        
+    </div>
+</div>
+<br>
+<hr>
+
+
+<!-- {{users | json}} -->

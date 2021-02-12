@@ -15,22 +15,22 @@ export class AskComponent implements OnInit {
   user:any;
   id:any;
   constructor(private abs:FormBuilder,private as:UserregService,private dele:Router) { 
-    this.userloginForm = abs.group({
+    this.userloginForm = this.abs.group({
       id: ['', Validators.required],
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       age: ['', Validators.required],
       gender: ['', Validators.required],
-      email: ['', Validators.email],
-      contactno: ['',  [Validators.required, Validators.minLength(10)]],
+      email: ['', Validators.required],
+      contactNo: ['',  [Validators.required, Validators.minLength(10)]],
       address: ['', Validators.required],
-      bgp: ['', Validators.required],
+      bloodGroup: ['', Validators.required],
       unit: ['', [Validators.required,Validators.minLength(1)]]
     });
   }
 
   ngOnInit(): void {
-    this.fngetuserdata();
+    
   }
 
   get f()
@@ -38,38 +38,24 @@ export class AskComponent implements OnInit {
     return this.userloginForm.controls;
   }
 
-  fngetuserdata()
- {
-   this.as.getuserdata().subscribe(data=>this.users=data)
- }
-
- findById()
+  fnAddRequest()
   {
-    this.as.dataById(this.id).subscribe(data=>this.userloginForm.patchValue(data));
+    
+    var request=this.userloginForm.value;
+
+    let result:any;
+    this.as.adduser(request).subscribe(data=>{
+      result=data;
+      alert("Request has been registered successfully");
+      alert("YOUR REQUEST ID IS '"+result.id+"' .KINDLY NOTE IT FOR FURTHER ACTIONS.");
+
+    });
+    this.userloginForm.reset();
+  
+  
+   
   }
-
- fnSubmit(){
-  // alert(JSON.stringify(this.userloginForm.value))
-  this.as.adduser(this.userloginForm.value).subscribe(data=>{
-    this.user=data;
-    this.userloginForm.patchValue(data);
-    this.fngetuserdata();
-    alert("SUCCESSFULLY REQUEST ADDED");
-  });
-
-}
-
-fnUpdate()
-{
- this.user=this.userloginForm.value;
- let res:any;
- this.as.updateUser(this.user).subscribe(data=>{
-   res=data;
-   this.fngetuserdata();
-   this.findById();
-   alert("Successfully data Updated");
- });
-}
+  
 
 
 

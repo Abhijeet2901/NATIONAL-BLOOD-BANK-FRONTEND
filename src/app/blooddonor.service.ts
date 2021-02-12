@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class BlooddonorService {
 
-  url:string="http://localhost:3000/donors/"
+  url:string="http://localhost:8080/donors/"
   constructor(private http:HttpClient) { }
 
   getAllBloodDonor()
@@ -25,6 +25,11 @@ export class BlooddonorService {
 
   updateBloodDonor(bdnr:any)
   {
-    return this.http.put(this.url+bdnr.id,bdnr);
+    return this.http.put(this.url,bdnr);
+  }
+
+  deleteBloodDonor(id:number)
+  {
+    return this.http.delete(this.url+id);
   }
 }

@@ -6,21 +6,27 @@ import { Injectable } from '@angular/core';
 })
 export class TodoService {
 
-  url:string="http://localhost:3000/bloodstock/"
+  url:string="http://localhost:8080/bloodStock/";
+  url1:string= 'http://localhost:8080/bloodStock/bloodGroup/';
   constructor(private http:HttpClient) { }
 
-  getAllTodos()
+  getAllBloodStock()
   {
     return this.http.get(this.url);
   }
-
-  getTodoById(id:any)
+  findBloodStockById(id:number)
   {
     return this.http.get(this.url+id);
   }
-
-  updateTodo(todo:any)
+   findBloodStockByBloodGroup(bloodGroup:any)
   {
-    return this.http.put(this.url+todo.id,todo);
+    return this.http.get(this.url1+bloodGroup);
   }
+   
+  updateBloodStock(bloodStock:any)
+  {
+    return this.http.put(this.url,bloodStock);
+  }
+
+ 
 }

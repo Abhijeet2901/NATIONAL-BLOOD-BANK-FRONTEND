@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TodoService } from '../todo.service';
 
@@ -9,44 +9,49 @@ import { TodoService } from '../todo.service';
   styleUrls: ['./bloodsearch.component.css']
 })
 export class BloodsearchComponent implements OnInit {
-  todos:any;
-    id:any;
-    todo:any;
-    todoForm:any;
-constructor(private y:TodoService,private bs:FormBuilder) {
-  this.todoForm=bs.group({
-      id:new FormControl(),
-      userId:new FormControl(),
-      title:new FormControl()
+ 
+  bloodStocks:any;
+  id:any;
+   bloodGroup:any;
+  bloodStock:any;
+  bloodStockForm=new FormGroup({
+    
+    id:new FormControl(),
+    bloodGroup:new FormControl(),
+    noOfUnits:new FormControl()
   });
- }
+
+  constructor(private y:TodoService) { }
 
   ngOnInit(): void {
-    this.fnGetAllTodos();
+    this. fnGetAllBloodStock();
   }
 
-  fnGetAllTodos()
-  			{
-			    this.y.getAllTodos().subscribe(data=>this.todos=data);
-        }
-
-        fnGetTodoById()
-        {
-          this.y.getTodoById(this.id).subscribe(data=>this.todoForm.patchValue(data));
-        }
-
-        fnUpdateTodo()
-        {
-          // alert("updating...");
-          this.todo=this.todoForm.value;
-          // alert(employee.id);
-          let result:any;
-          this.y.updateTodo(this.todo).subscribe(data=>{
-            result=data;
-            this.fnGetAllTodos();
-            this.fnGetTodoById();
-          }
-        );
-
+  fnGetAllBloodStock()
+  {
+    this.y.getAllBloodStock().subscribe(data=>this.bloodStocks=data);
+  }
+fnGetBloodStockById()
+{
+this.y.findBloodStockById(this.id).subscribe(data=>this.bloodStockForm.patchValue(data));
 }
+fnGetBloodStockByBloodGroup()
+{
+this.y.findBloodStockByBloodGroup(this.bloodGroup).subscribe(data=>this.bloodStockForm.patchValue(data));
+}
+fnUpdateBloodStock()
+{
+// alert("updating...");
+this.bloodStock=this.bloodStockForm.value;
+// alert(employee.id);
+let result:any;
+this.y.updateBloodStock(this.bloodStock).subscribe(data=>{
+result=data;
+this.fnGetAllBloodStock();
+this.fnGetBloodStockById();
+}
+);
+
+
+}  
 }

@@ -1,10 +1,14 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 .jumbotron
 {
-  background-image: url(https://www.teahub.io/photos/full/283-2838767_home-background-image-for-blood-bank.jpg);
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
   background-size: cover;
   height:200px;
+  background-attachment: fixed;
+  
+  
 }
+
 
 #divi1
 {
@@ -14,11 +18,26 @@
 
 .bg {
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg");
+  
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+
+}
+
+#hlp
+{
+  transition: .5s ease;
+}
+#hlp:hover
+{
+  -webkit-transform: scale(1.20);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.20);
+    -ms-transform: scale(1.20);
+    -o-transform: scale(1.20);
 }

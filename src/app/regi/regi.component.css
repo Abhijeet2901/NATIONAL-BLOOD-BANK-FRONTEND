@@ -1,15 +1,103 @@
-#blok1,#blok2
+/* #bloc1,#bloc2
 {
     display: inline;
 }
-#blok3,#blok4
+#bloc3,#bloc4
 {
     display: inline;
-}
+} */
 .container{
-    background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-geometric-gradient-creative-blood-donation-poster-background-material-image_134137.jpg);
+    /* background-image: url("https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg"); */
      width :1250px ; 
      height: 750px ;
      background-size: 100% ;
      background-size: cover;
 }
+
+#sub
+{
+    position:relative;
+    transition: .5s ease;
+    top: 20px;
+    left: 270px;
+    right: -420px;
+    bottom: -191px;
+}
+#sub:hover
+{
+    -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+}
+
+#res
+{
+    position:relative;
+    transition: .5s ease;
+    top: 20px;
+    left: 320px;
+    right: -420px;
+    bottom: -191px;
+}
+#res:hover
+{
+    -webkit-transform: scale(1.50);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.50);
+    -ms-transform: scale(1.50);
+    -o-transform: scale(1.50);
+}
+
+#otp
+{
+    transition: .5s ease;
+}
+#otp:hover
+{
+    -webkit-transform: scale(1.25);/*Grows in size like Angry Birds button*/
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+}
+
+.regbg
+{
+    background-image: url('https://coolbackgrounds.io/images/backgrounds/red/red-trianglify-3c51d9e2.jpg');
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+
+.jumbotron
+{
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
+  background-size: cover;
+  height:200px;
+  background-attachment: fixed;
+  
+  
+}
+
+.regform
+{
+    
+      border: 1px  ;
+      padding: 20px;
+      border-radius: 25px;
+      transition: .5s ease;
+    /* border: 1px solid  #800000;
+    padding: 20px;
+    */
+}
+.regform:hover
+    {
+      -moz-box-shadow: 0 0 50px #000000;
+      -webkit-box-shadow: 0 0 50px #000000;
+      box-shadow: 0 0 50px #000000;
+    }
+
+   

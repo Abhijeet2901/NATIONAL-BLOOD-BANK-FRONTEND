@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-adminhome',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminhomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ls:LoginService,private rtr:Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  fnLogout()
+  {
+    this.ls.logout();
+    this.rtr.navigate(['/login']);
   }
 
 }
